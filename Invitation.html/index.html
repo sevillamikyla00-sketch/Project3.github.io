@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebration Invitation</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1f2937', // Gray-800 for strong text
+                        'primary-light': '#f0fdfa', // Teal-50 for background accent
+                        'accent': '#14b8a6', // Teal-500 for festive accents
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        // A more fun, celebratory font for titles (using cursive as fallback)
+                        display: ['"Comic Sans MS"', 'cursive', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom font import (Inter is used, but adding for completeness) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Apply a subtle, festive background */
+        body {
+            background-color: #f0fdfa; /* Light teal background */
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .invitation-shadow {
+            /* Deeper shadow for a celebratory look */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex items-center justify-center p-4">
+
+    <!-- Invitation Card Container -->
+    <div class="invitation-shadow w-full max-w-lg bg-white rounded-2xl overflow-hidden shadow-2xl transition duration-500 hover:shadow-accent/50">
+        
+        <!-- Header Image / Accent Area -->
+        <div class="h-48 bg-cover bg-center" style="background-image: url('https://placehold.co/800x300/ccfbf1/0d9488?text=Happy+Birthday+Party');" 
+             onerror="this.style.backgroundImage='none'; this.style.backgroundColor='#14b8a6';">
+            <div class="p-6 h-full flex flex-col justify-center items-center bg-black bg-opacity-30">
+                <p class="text-xl text-white italic font-display mb-2 drop-shadow-md">Join the fun and celebrate</p>
+                <h1 class="text-6xl font-bold text-yellow-300 tracking-wider font-display drop-shadow-xl animate-pulse">
+                    JAY'S BIG 3-0!
+                </h1>
+                <p class="text-sm text-gray-100 mt-2 font-semibold">Turning the big three-oh!</p>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="p-8 text-center">
+
+            <p class="text-primary-dark mb-6 text-xl leading-relaxed font-semibold">
+                Get ready for an evening of good food, great music, and even better company!
+            </p>
+
+            <!-- Details Section -->
+            <div class="space-y-6 mb-10">
+                <div class="pb-4 border-b-4 border-accent/20 border-dotted">
+                    <p class="text-lg font-bold text-accent uppercase">When</p>
+                    <p class="text-3xl font-extrabold text-primary-dark mt-1">Friday, November 29th</p>
+                    <p class="text-xl text-gray-600">8:00 PM until late</p>
+                </div>
+
+                <div>
+                    <p class="text-lg font-bold text-accent uppercase">Where</p>
+                    <p class="text-2xl font-bold text-primary-dark">The Lakeside Pavilion</p>
+                    <p class="text-lg text-gray-600">456 Party Street, Downtown, CA 90210</p>
+                    <p class="text-sm text-gray-400 italic mt-1">Dress code: Cocktail Casual</p>
+                </div>
+            </div>
+
+            <!-- Call to Action / RSVP -->
+            <a href="mailto:rsvp@example.com?subject=RSVP%20for%20Jay's%2030th%20Birthday"
+               class="inline-block px-10 py-3 bg-accent text-white font-extrabold uppercase tracking-widest rounded-full shadow-xl hover:bg-teal-600 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-teal-300 animate-bounce">
+                RSVP Now
+            </a>
+            <p class="text-xs text-gray-400 mt-3">Please let us know if you can make it by Nov 15th!</p>
+
+        </div>
+        
+        <!-- Footer / Signature -->
+        <div class="p-4 bg-primary-light text-center border-t border-gray-200">
+            <p class="text-base text-primary-dark font-semibold">
+                — We can't wait to celebrate with you! —
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
